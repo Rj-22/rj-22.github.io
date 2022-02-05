@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"os/exec"
 )
 
@@ -11,6 +12,9 @@ func main() {
 	for git_installed != "y" && git_installed != "n" {
 		fmt.Print("Did you installed git already?(y/n) ")
 		fmt.Scan(&git_installed)
+	}
+	if git_installed == "n" {
+		os.Exit(0)
 	}
 	out, err := exec.Command("git", "init").Output()
 	out, err = exec.Command("git", "add", ".").Output()
