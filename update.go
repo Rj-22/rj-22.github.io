@@ -24,7 +24,7 @@ func main() {
 	fmt.Println("commiting current working directory...")
 	out, err = exec.Command("git", "commit", "-m", "update website").Output()
 	fmt.Println("pushing to github...")
-	out, err = exec.Command("git", "push", "-u", "https://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@github.com/rj-22/rj-22.github.io.git").Output()
+	out, err = exec.Command("git", "push", "-u", "https://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@github.com/Rj-22/rj-22.github.io.git").Output()
 	fmt.Println(string(out))
 	fmt.Println(err.Error())
 }
