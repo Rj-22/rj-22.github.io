@@ -27,5 +27,5 @@ func main() {
 	fmt.Println("pushing to github...")
 	out, err = exec.Command("git", "push", "https://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@github.com/rj-22/rj-22.github.io.git").Output()
 	fmt.Println(string(out))
-	fmt.Println(err)
+	fmt.Println(err.Error())
 }
