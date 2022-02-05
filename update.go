@@ -17,14 +17,12 @@ func main() {
 		fmt.Scan(&git_installed)
 		os.Exit(0)
 	}
-	fmt.Println("Initializing git...")
-	out, err := exec.Command("git", "init").Output()
 	fmt.Println("adding new files...")
-	out, err = exec.Command("git", "add", ".").Output()
+	out, err := exec.Command("git", "add", ".").Output()
 	fmt.Println("commiting current working directory...")
 	out, err = exec.Command("git", "commit", "-m", "update website").Output()
 	fmt.Println("pushing to github...")
-	out, err = exec.Command("git", "push", "-u", "https://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@github.com/Rj-22/rj-22.github.io.git").Output()
+	out, err = exec.Command("git", "push", "-u", "https://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@github.com/Rj-22/rj-22.github.io.git").Output()
 	if err != nil {
 		fmt.Println(out)
 		fmt.Println(err.Error())
