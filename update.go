@@ -20,7 +20,7 @@ func main() {
 	fmt.Println("adding new files...")
 	out, err := exec.Command("git", "add", ".").Output()
 	fmt.Println("commiting current working directory...")
-	out, err = exec.Command("git", "commit", "-m", "update website").Output()
+	out, err = exec.Command("git", "commit", "-m", "\"update\"").Output()
 	fmt.Println("pushing to github...")
 	out, err = exec.Command("git", "push", "-u", "https://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@github.com/Rj-22/rj-22.github.io.git").Output()
 	if err != nil {
