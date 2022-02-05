@@ -8,7 +8,7 @@ import (
 func main() {
 	fmt.Println("Please install git before upgrading.(https://git-scm.com/downloads)")
 	var git_installed byte
-	fmt.Sscanln("Did you installed git already?(y/n) %c", &git_installed)
+	fmt.Scanf("Did you installed git already?(y/n) %c", &git_installed)
 	out, err := exec.Command("git", "init").Output()
 	out, err = exec.Command("git", "add", ".").Output()
 	out, err = exec.Command("git", "commit", "-m", "update website").Output()
