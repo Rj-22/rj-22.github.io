@@ -24,7 +24,10 @@ func main() {
 	fmt.Println("commiting current working directory...")
 	exec.Command("git", "commit", "-m", "\"update\"").Run()
 
-	fmt.Println("Please create a token here: https://github.com/settings/tokens account: it.rojdax.com@gmail.com")
+	fmt.Println(
+		"The account: it.rojdax.com@gmail.com\n"+
+		"Please check the repo checkbox.\n"+
+		"Please create a token here: https://github.com/settings/tokens")
 
 	vari = " "
 	for vari == " " {
@@ -35,4 +38,7 @@ func main() {
 	fmt.Println("pushing to github...")
 	exec.Command("git", "push",
 		"https://"+vari+"@github.com/Rj-22/rj-22.github.io.git").Run()
+	
+	fmt.Println("\nDone")
+	fmt.Scan(&vari)
 }
